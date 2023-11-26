@@ -299,7 +299,7 @@ body::-webkit-scrollbar-thumb{
 	z-index: 1;
 	font-family: 'Inter', "sans-serif";
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 28px;
 	color: var(--dark-color);
 	font-style: normal;
 	margin-top: 5px;

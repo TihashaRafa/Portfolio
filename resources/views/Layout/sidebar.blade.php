@@ -6,7 +6,7 @@
                 <div class="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-full" data-img-url="{{ asset('assets/img/about/1.jpg') }}"></div>
             </div>
             <div class="name w-full float-left mt-[-19px]">
-                <h3><span>Tihasha Rafa<span class="back">Tihasha Rafa</span></span></h3>
+                <h4><span>Tihasha Rafa<span class="back">Tihasha Rafa</span></span></h4>
             </div>
         </div>
         <div class="menu scrollable w-full float-left">
