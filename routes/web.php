@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SideBarController;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
 
@@ -20,3 +22,14 @@ Use App\Http\Controllers\UserController;
 
 
 Route::get('/', [UserController::class,'index'])->name('');
+
+Route::get('/admin/login', [AdminController::class,'admin'])->name('');
+
+Route::get('/home', [SideBarController::class,''])->name('');
+
+
+
+Route::get('/sidebar', [SideBarController::class,'create'])->name('sidebar.create');
+Route::get('/sidebar/add', [SideBarController::class,'store'])->name('sidebar.add');
+Route::get('/sidebar/index', [SideBarController::class,'index'])->name('sidebar.index');
+Route::get('/sidebar/edit', [SideBarController::class,'edit'])->name('sidebar.edit');
