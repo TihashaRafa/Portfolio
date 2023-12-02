@@ -672,7 +672,7 @@ h6 {
   }
 
   .elisc_tm_home .title h3,.elisc_tm_home .title span {
-    font-size: 50px;
+    /* font-size: 50px; */
     line-height: 60px;
   }
 
@@ -931,7 +931,7 @@ h6 {
   }
 
   .elisc_tm_home .title h3,.elisc_tm_home .title span {
-    font-size: 50px;
+    /* font-size: 50px; */
     line-height: 63px;
   }
 
@@ -1116,7 +1116,7 @@ h6 {
 
 @media (max-width: 768px) {
   .elisc_tm_home .title h3,.elisc_tm_home .title span {
-    font-size: 35px;
+    /* font-size: 35px; */
     line-height: 45px;
   }
 

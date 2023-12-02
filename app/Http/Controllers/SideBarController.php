@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class SideBarController extends Controller
 {
     public function index(){
-        $sideBar = sideBer::orderBy(0,"desc")->paginate(10);
+
+        $sideBar = sideBer::all();
         return view("backend.pages.sidebar.index", compact("sideBar"));
     }
 
@@ -17,13 +18,41 @@ class SideBarController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'title' => 'required',
             'slug' => 'required',
         ]);
-        sideBer::create($request->all());
-        return redirect()->route('sidebar.index')
-            ->with('success', 'Profile created successfully.');
+
+        $sideBer = sideBer::create($validated);
+
+        return redirect(route('sidebar.index'))->with('success', 'Sideber created successfully.');
     }
+
+
+    public function edit($id)
+    {
+        $sideBer = sideBer::findOrFail($id);
+        return view('backend.pages.sidebar.edit', compact('sideBer'));
+    }
+
+
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            
+        ]);
+
+        $sideBer = sideBer::find($id);
+        $sideBer->title = $validatedData['title'];
+        $sideBer->slug = $validatedData['slug'];
+       
+        $sideBer->save();
+
+        return redirect(route('sidebar.index'))->with('success', 'Data updated successfully.');
+    }
+
 
 }

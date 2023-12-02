@@ -30,6 +30,7 @@ Route::get('/home', [SideBarController::class,''])->name('');
 
 
 Route::get('/sidebar', [SideBarController::class,'create'])->name('sidebar.create');
-Route::get('/sidebar/add', [SideBarController::class,'store'])->name('sidebar.add');
+Route::post('/sidebar/add', [SideBarController::class,'store'])->name('sidebar.add');
 Route::get('/sidebar/index', [SideBarController::class,'index'])->name('sidebar.index');
-Route::get('/sidebar/edit', [SideBarController::class,'edit'])->name('sidebar.edit');
+Route::get('/sidebar/edit/{id}', [SideBarController::class,'edit'])->name('sidebar.edit');
+Route::post('/sidebar/update/{id}', [SideBarController::class,'update'])->name('sidebar.update');
