@@ -57,6 +57,11 @@ class SideBarController extends Controller
         return redirect(route('sidebar.index'))->with('success', 'Data updated successfully.');
     }
 
+    public function destroy($id){
+        sideBer::destroy($id);
+        return redirect(route('sidebar.index'))->with('success','Delete successfully');
+    }
+
 
 }
 

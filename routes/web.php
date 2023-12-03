@@ -34,3 +34,4 @@ Route::post('/sidebar/add', [SideBarController::class,'store'])->name('sidebar.a
 Route::get('/sidebar/index', [SideBarController::class,'index'])->name('sidebar.index');
 Route::get('/sidebar/edit/{id}', [SideBarController::class,'edit'])->name('sidebar.edit');
 Route::post('/sidebar/update/{id}', [SideBarController::class,'update'])->name('sidebar.update');
+Route::get('/sidebar/delete/{id}', [SideBarController::class,'destroy'])->name('sidebar.delete');

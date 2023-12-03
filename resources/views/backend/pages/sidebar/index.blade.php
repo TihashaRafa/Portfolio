@@ -59,6 +59,7 @@
                                                 <td>{{ $items->slug }}</td>
                                                 <td>
                                                   <a href="{{ route('sidebar.edit', $items->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                                  <a href="{{ route('sidebar.delete', $items->id) }}" class="btn btn-primary btn-sm">Delete</a>
                                                 </td>
 
                                             </tr>
