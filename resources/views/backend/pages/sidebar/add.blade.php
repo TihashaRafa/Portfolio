@@ -29,14 +29,8 @@
                                                 placeholder="Title Here...">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="slug" class="col-sm-2 col-form-label">Slug</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="slug" name="slug"
-                                                placeholder="Slug">
-                                        </div>
-                                    </div>
                                 </div>
+
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Create</button>
                                     <button type="submit" class="btn btn-default float-right">Cancel</button>
@@ -50,4 +44,8 @@
             </div>
         </section>
     </div>
+
+
+
+
 @endsection

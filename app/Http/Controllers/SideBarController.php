@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\sideBer;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class SideBarController extends Controller
@@ -20,10 +21,12 @@ class SideBarController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required',
-            'slug' => 'required',
         ]);
 
-        $sideBer = sideBer::create($validated);
+        $sideBer = new sideBer();
+        $sideBer->title = $request->title;
+        $sideBer->slug = Str::slug($request->title);
+        $sideBer->save();
 
         return redirect(route('sidebar.index'))->with('success', 'Sideber created successfully.');
     }
@@ -56,3 +59,4 @@ class SideBarController extends Controller
 
 
 }
+
