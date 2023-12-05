@@ -26,6 +26,13 @@ class SideBarController extends Controller
         $sideBer = new sideBer();
         $sideBer->title = $request->title;
         $sideBer->slug = Str::slug($request->title);
+        $sideBer->image = $request->image;
+        $sideBer->name = $request->name;
+        $sideBer->fb_link = $request->fb_link;
+        $sideBer->linkedin_link = $request->linkedin_link;
+        $sideBer->git_link = $request->git_link;
+        $sideBer->footer_content = $request->content;
+        
         $sideBer->save();
 
         return redirect(route('sidebar.index'))->with('success', 'Sideber created successfully.');
@@ -49,6 +56,12 @@ class SideBarController extends Controller
         $sideBer = sideBer::find($id);
         $sideBer->title = $validatedData['title'];
         $sideBer->slug = $validatedData['slug'];
+        $sideBer->image = $request->image;
+        $sideBer->name = $request->name;
+        $sideBer->fb_link = $request->fb_link;
+        $sideBer->linkedin_link = $request->linkedin_link;
+        $sideBer->git_link = $request->git_link;
+        $sideBer->footer_content = $request->content;
        
         $sideBer->save();
 

@@ -48,6 +48,11 @@
                                             <th>ID</th>
                                             <th>Title</th>
                                             <th>Slug</th>
+                                            <th>Name</th>
+                                            <th>Fackbook</th>
+                                            <th>LinkedIn</th>
+                                            <th>Github</th>
+                                            <th>Content</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -57,6 +62,11 @@
                                                 <td>{{ $key + 1 }}</td>
                                                 <td>{{ $items->title }}</td>
                                                 <td>{{ $items->slug }}</td>
+                                                <td>{{ $items->name }}</td>
+                                                <td>{{ $items->fb_link }}</td>
+                                                <td>{{ $items->linkedin_link }}</td>
+                                                <td>{{ $items->git_link }}</td>
+                                                <td>{{ $items->footer_content }}</td>
                                                 <td>
                                                   <a href="{{ route('sidebar.edit', $items->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                                   <a href="{{ route('sidebar.delete', $items->id) }}" class="btn btn-primary btn-sm">Delete</a>

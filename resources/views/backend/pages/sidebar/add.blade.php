@@ -13,7 +13,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
 
                         <div class="card card-info">
                             <div class="card-header">
@@ -32,7 +32,7 @@
                                     <div class="form-group row">
                                         <label for="title" class="col-sm-2 col-form-label">Name</label>
                                         <div class="col-sm-10">
-                                            <input type="file" class="form-control" id="name" name="name">
+                                            <input type="text" class="form-control" id="name" name="name">
                                         </div>
                                     </div>
 
@@ -72,13 +72,10 @@
                                             <input type="text" class="form-control" id="content" name="content">
                                         </div>
                                     </div>
-
-
                                 </div>
-
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Create</button>
-                                    <button type="submit" class="btn btn-default float-right">Cancel</button>
+                                 
                                 </div>
                             </form>
                         </div>

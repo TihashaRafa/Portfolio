@@ -10,7 +10,7 @@ class SidebarController extends Controller
 {
     public function index(){
 
-        $sideBar = sideBer::all();
-        return view("Layout.sidebar",compact("sidebar"));
+        // $sideBar = sideBer::all();
+        // return view("Layout.sidebar",compact("sidebar"));
     }
 }
