@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('side_bers', function (Blueprint $table) {
+        Schema::create('sidebar_twos', function (Blueprint $table) {
             $table->id();
-          
-            $table->string('title')->unique();
-            $table->string('slug');
-           
+            $table->string('image')->nullable();
+            $table->string('name');
+            $table->string('fb_link')->nullable();
+            $table->string('linkedin_link')->nullable();
+            $table->string('git_link')->nullable();
+            $table->string('footer_content')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('side_bers');
+        Schema::dropIfExists('sidebar_twos');
     }
 };
