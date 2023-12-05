@@ -98,19 +98,8 @@
                                 </div>
                                 <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
                                 
-                                <!-- Modalbox Info Start -->
-                                {{-- <div class="hidden_details">
-                                    <div class="descriptions">
-                                        <p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                        <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                        <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                    </div>
-                                </div> --}}
-                                <!-- /Modalbox Info Start -->
-                                
                             </div>
                         </li>
-
                         
                         <li class="mb-[40px] pl-[30px] float-left w-1/2">
                             <img class="popup_image" src="assets/img/experience/2.jpg" alt="" />
@@ -128,49 +117,8 @@
                                     <p class="opacity-[0.7]">o create effective Facebook marketing content for a website development or boosting service, it's important to highlight the key aspects of your service</p>
                                 </div>
                                 <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-                                
-                                <!-- Modalbox Info Start -->
-                                {{-- <div class="hidden_details">
-                                    <div class="descriptions">
-                                        <p>Rafa is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                        <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                        <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                    </div>
-                                </div> --}}
-                                <!-- /Modalbox Info Start -->
-                                
                             </div>
                         </li>
-                        
-                        {{-- <li class="mb-[40px] pl-[30px] float-left w-1/2">
-                            <img class="popup_image" src="assets/img/experience/4.jpg" alt="" />
-                            <div class="list_inner w-full float-left clear-both bg-white rounded-[4px] px-[70px] py-[45px] relative">
-                                <div class="short w-full float-left flex justify-between mb-[16px]">
-                                    <div class="job">
-                                        <span class="text-yellow-color font-medium inline-block mb-[4px]">-2013 - 2015</span>
-                                        <h3 class="text-[20px]">Freelancer</h3>
-                                    </div>
-                                    <div class="place">
-                                        <span class="font-medium font-inter">-Vivaco Corp.</span>
-                                    </div>
-                                </div>
-                                <div class="text w-full float-left">
-                                    <p class="opacity-[0.7]">Website development is the process of building, programming, coding and maintaining websites and web applications.</p>
-                                </div>
-                                <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-                                
-                                <!-- Modalbox Info Start -->
-                                <div class="hidden_details">
-                                    <div class="descriptions">
-                                        <p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                        <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                        <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                    </div>
-                                </div>
-                                <!-- /Modalbox Info Start -->
-                                
-                            </div>
-                        </li> --}}
                     </ul>
                 </div>
             </div>

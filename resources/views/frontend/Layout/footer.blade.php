@@ -1,3 +1,8 @@
+@php
+    $sidebar = App\Models\sideBer::all();
+    $sidebars = App\Models\sidebarTwo::all();
+@endphp
+
 <div class="elisc_tm_mobile_menu">
     <div class="inner relative w-full h-full text-right px-[20px] pt-[70px] pb-[20px]">
         <div class="wrapper">
@@ -6,24 +11,25 @@
             </div>
             <div class="menu_list w-full h-auto clear-both float-left mb-[50px]">
                 <ul class="m-0 anchor_nav">
-                    <li class="current mb-[7px]"><a class="text-dark-color" href="#home">Home</a></li>
-                    <li class="mb-[7px]"><a class="text-dark-color" href="#about">About</a></li>
-                    <li class="mb-[7px]"><a class="text-dark-color" href="#project">Project</a></li>
-                    <li class="mb-[7px]"><a class="text-dark-color" href="#portfolio">Portfolio</a></li>
-                    <li class="mb-[7px]"><a class="text-dark-color" href="#contact">Contact</a></li>
+                    @foreach($sidebar as $items)
+                    <li class="current mb-[15px]"><a href="#{{$items->slug}}">{{ $items->title }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="social w-full float-left mb-[5px]">
                 <ul>
-                    <li class="mr-[8px] inline-block"><a class="text-[#333]" href="https://www.facebook.com/tisha.rafa"><img class="svg" src="{{ asset('assets/img/svg/social/facebook.svg') }}" alt="" /></a></li>
-                    <li class="mr-[8px] inline-block"><a class="text-[#333]" href="https://twitter.com/TihashaRafa"><img class="svg" src="{{ asset('assets/img/svg/social/twitter.svg') }}" alt="" /></a></li>
-                    <li class="mr-[8px] inline-block"><a class="text-[#333]" href="#"><img class="svg" src="{{ asset('assets/img/svg/social/instagram.svg') }}" alt="" /></a></li>
-                    <li class="mr-[8px] inline-block"><a class="text-[#333]" href="#"><img class="svg" src="{{ asset('assets/img/svg/social/dribbble.svg') }}" alt="" /></a></li>
-                    <li class="inline-block"><a class="text-[#333]" href="#"><img class="svg" src="{{ asset('assets/img/svg/social/tik-tok.svg') }}" alt="" /></a></li>
+                    @foreach($sidebars as $items)
+                    <li class="mr-[3px] inline-block"><a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color" href="{{ $items->fb_link }}"><i class="icon-facebook-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a></li>
+                    <li class="mr-[3px] inline-block"><a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color" href="{{ $items->linkedin_link }}"><i class="icon-twitter-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a></li>
+                    <li class="inline-block"><a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color" href="{{ $items->git_link }}"><i class="icon-linkedin-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="copyright w-full float-left">
-                <p class="text-dark-color">Copyright &copy; 2023</p>
+
+                @foreach($sidebars as $items)
+                <p class="text-dark-color">Copyright &copy; {{ $items->footer_content }}</p>
+                @endforeach
             </div>
         </div>
     </div>
