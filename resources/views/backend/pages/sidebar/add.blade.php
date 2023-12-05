@@ -45,7 +45,7 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="title" class="col-sm-2 col-form-label">Facebook Link</label>
+                                        <label for="title" class="col-sm-2 col-form-label">Facebook</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" id="fb_link" name="fb_link"
                                                 ">
@@ -53,14 +53,14 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="title" class="col-sm-2 col-form-label">LinkedIn link</label>
+                                        <label for="title" class="col-sm-2 col-form-label">LinkedIn</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" id="linkedin_link" name="linkedin_link">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="title" class="col-sm-2 col-form-label">Github Link</label>
+                                        <label for="title" class="col-sm-2 col-form-label">Github</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" id="git_link" name="git_link">
                                         </div>
