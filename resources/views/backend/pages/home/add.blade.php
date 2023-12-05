@@ -19,7 +19,7 @@
                             <div class="card-header">
                                 <h3 class="card-title"> Home Page Form</h3>
                             </div>
-                            <form method="POST" action="" enctype="multipart/form-data">
+                            <form method="POST" action="#" enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                  
@@ -121,14 +121,11 @@
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Create</button>
-                                 
                                 </div>
                             </form>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </section>
     </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SideBarController;
 use App\Http\Controllers\SidebarTwoController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
 
@@ -45,3 +46,13 @@ Route::group(['prefix' => 'sidebars'], function () {
     Route::post('/update/{id}', [SidebarTwoController::class, 'update'])->name('sidebars.update');
     Route::get('/delete/{id}', [SidebarTwoController::class, 'destroy'])->name('sidebars.delete');
 });
+
+Route::group(['prefix' => 'home'], function () {
+    Route::get('/', [HomeController::class, 'create'])->name('home.create');
+    Route::post('/add', [HomeController::class, 'store'])->name('home.add');
+    Route::get('/index', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('home.edit');
+    Route::post('/update/{id}', [HomeController::class, 'update'])->name('home.update');
+    Route::get('/delete/{id}', [HomeController::class, 'destroy'])->name('home.delete');
+});
+

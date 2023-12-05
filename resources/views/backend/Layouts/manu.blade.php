@@ -58,6 +58,16 @@
             </a>
           </li>
 
+
+          <li class="nav-item">
+            <a href="{{ route('home.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Home Page
+              </p>
+            </a>
+          </li>
+
           
           <li class="nav-item">
             <a href="#" class="nav-link">
