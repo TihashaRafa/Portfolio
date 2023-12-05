@@ -44,7 +44,16 @@
             <a href="{{ route('sidebar.index') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                SideBar 
+                Nav 
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('sidebars.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Sidebar
               </p>
             </a>
           </li>

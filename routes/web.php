@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SideBarController;
+use App\Http\Controllers\SidebarTwoController;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
 
@@ -34,4 +35,14 @@ Route::group(['prefix' => 'sidebar'], function () {
     Route::get('/edit/{id}', [SideBarController::class, 'edit'])->name('sidebar.edit');
     Route::post('/update/{id}', [SideBarController::class, 'update'])->name('sidebar.update');
     Route::get('/delete/{id}', [SideBarController::class, 'destroy'])->name('sidebar.delete');
+});
+
+
+Route::group(['prefix' => 'sidebars'], function () {
+    Route::get('/', [SidebarTwoController::class, 'create'])->name('sidebars.create');
+    Route::post('/add', [SidebarTwoController::class, 'store'])->name('sidebars.add');
+    Route::get('/index', [SidebarTwoController::class, 'index'])->name('sidebars.index');
+    Route::get('/edit/{id}', [SidebarTwoController::class, 'edit'])->name('sidebars.edit');
+    Route::post('/update/{id}', [SidebarTwoController::class, 'update'])->name('sidebars.update');
+    Route::get('/delete/{id}', [SidebarTwoController::class, 'destroy'])->name('sidebars.delete');
 });
