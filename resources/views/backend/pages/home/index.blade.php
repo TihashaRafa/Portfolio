@@ -43,14 +43,23 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Title</th>
-                                            <th>Slug</th>
+                                            <th>Name</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                      
+                                        @foreach($homepage as $key => $items)
+                                        <tr>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $items->name }}</td>
+                                            <td>
+                                              <a href="{{ route('home.edit', $items->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                              <a href="{{ route('home.delete', $items->id) }}" class="btn btn-primary btn-sm">Delete</a>
+                                            </td>
 
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
