@@ -21,7 +21,6 @@ Use App\Http\Controllers\UserController;
 //     return view('welcome');
 // });
 
-
 Route::get('/', [UserController::class,'index'])->name('');
 
 Route::get('/admin/login', [AdminController::class,'admin'])->name('');

@@ -50,7 +50,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($sideBar as $key => $items)
+                                        @foreach ($sideBars as $key => $items)
                                             <tr>
                                                 <td>{{ $key + 1 }}</td>
                                                 <td>{{ $items->name }}</td>

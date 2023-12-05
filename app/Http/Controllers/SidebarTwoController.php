@@ -9,8 +9,8 @@ class SidebarTwoController extends Controller
 {
     public function index(){
 
-        $sideBar = sidebarTwo::all();
-        return view("backend.pages.Sidebar_two.index", compact("sideBar"));
+        $sideBars = sidebarTwo::all();
+        return view("backend.pages.Sidebar_two.index", compact("sideBars"));
     }
 
     public function create(){
@@ -19,15 +19,15 @@ class SidebarTwoController extends Controller
 
     public function store(Request $request)
     {
-        $sideBer = new sidebarTwo();
-        $sideBer->image = $request->image;
-        $sideBer->name = $request->name;
-        $sideBer->fb_link = $request->fb_link;
-        $sideBer->linkedin_link = $request->linkedin_link;
-        $sideBer->git_link = $request->git_link;
-        $sideBer->footer_content = $request->content;
+        $sideBars = new sidebarTwo();
+        $sideBars->image = $request->image;
+        $sideBars->name = $request->name;
+        $sideBars->fb_link = $request->fb_link;
+        $sideBars->linkedin_link = $request->linkedin_link;
+        $sideBars->git_link = $request->git_link;
+        $sideBars->footer_content = $request->content;
         
-        $sideBer->save();
+        $sideBars->save();
 
         return redirect(route('sidebars.index'))->with('success', 'Sideber created successfully.');
     }
@@ -35,21 +35,21 @@ class SidebarTwoController extends Controller
 
     public function edit($id)
     {
-        $sideBer = sidebarTwo::findOrFail($id);
-        return view('backend.pages.Sidebar_two.edit', compact('sideBer'));
+        $sideBars = sidebarTwo::findOrFail($id);
+        return view('backend.pages.Sidebar_two.edit', compact('sideBars'));
     }
 
     public function update(Request $request, $id)
     {
-        $sideBer = sidebarTwo::find($id);
-        $sideBer->image = $request->image;
-        $sideBer->name = $request->name;
-        $sideBer->fb_link = $request->fb_link;
-        $sideBer->linkedin_link = $request->linkedin_link;
-        $sideBer->git_link = $request->git_link;
-        $sideBer->footer_content = $request->content;
+        $sideBars = sidebarTwo::find($id);
+        $sideBars->image = $request->image;
+        $sideBars->name = $request->name;
+        $sideBars->fb_link = $request->fb_link;
+        $sideBars->linkedin_link = $request->linkedin_link;
+        $sideBars->git_link = $request->git_link;
+        $sideBars->footer_content = $request->content;
        
-        $sideBer->save();
+        $sideBars->save();
 
         return redirect(route('sidebars.index'))->with('success', 'Data updated successfully.');
     }

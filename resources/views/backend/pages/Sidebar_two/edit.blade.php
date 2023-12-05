@@ -21,7 +21,7 @@
                                 <h3 class="card-title"> Sidebar Edit Form</h3>
                             </div>
                             <form class="form-horizontal" method="POST"
-                                action="{{ route('sidebars.update', $sideBer->id) }}">
+                                action="{{ route('sidebars.update', $sideBars->id) }}">
                                 @csrf
 
                                 <div class="card-body">
@@ -30,7 +30,7 @@
                                     <label for="image" class="col-sm-2 col-form-label">Image</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" name="image" id="image"
-                                            value="{{ $sideBer->image }}">
+                                            value="{{ $sideBars->image }}">
                                     </div>
                                 </div>
 
@@ -39,7 +39,7 @@
                                   <label for="name" class="col-sm-2 col-form-label">Name</label>
                                   <div class="col-sm-10">
                                       <input type="text" class="form-control" name="name" id="name"
-                                          value="{{ $sideBer->name }}">
+                                          value="{{ $sideBars->name }}">
                                   </div>
                               </div>
 
@@ -47,7 +47,7 @@
                                       <label for="name" class="col-sm-2 col-form-label">Name</label>
                                       <div class="col-sm-10">
                                           <input type="text" class="form-control" name="name" id="name"
-                                              value="{{ $sideBer->name }}">
+                                              value="{{ $sideBars->name }}">
                                       </div>
                                   </div>
 
@@ -56,7 +56,7 @@
                                     <label for="fb_link" class="col-sm-2 col-form-label">Facebook</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" name="fb_link" id="fb_link"
-                                            value="{{ $sideBer->fb_link }}">
+                                            value="{{ $sideBars->fb_link }}">
                                     </div>
                                 </div>
 
@@ -65,7 +65,7 @@
                                   <label for="linkedin_link" class="col-sm-2 col-form-label">LinkedIn</label>
                                   <div class="col-sm-10">
                                       <input type="text" class="form-control" name="linkedin_link" id="linkedin_link"
-                                          value="{{ $sideBer->linkedin_link }}">
+                                          value="{{ $sideBars->linkedin_link }}">
                                   </div>
                               </div>
 
@@ -73,7 +73,7 @@
                                 <label for="git_link" class="col-sm-2 col-form-label">Github</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="git_link" id="git_link"
-                                        value="{{ $sideBer->git_link }}">
+                                        value="{{ $sideBars->git_link }}">
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@
                               <label for="content" class="col-sm-2 col-form-label">Footer Content</label>
                               <div class="col-sm-10">
                                   <input type="text" class="form-control" name="content" id="content"
-                                      value="{{ $sideBer->footer_content }}">
+                                      value="{{ $sideBars->footer_content }}">
                               </div>
                           </div>
 
