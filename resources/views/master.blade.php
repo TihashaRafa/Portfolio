@@ -33,14 +33,14 @@
 		<div class="dodo_tm_one_page_wrapper">
 			
 			<!-- MOBILE MENU -->
-			@include('Layout.manu')
-			@include('Layout.footer')
+			@include('frontend.Layout.manu')
+			@include('frontend.Layout.footer')
 		
 			@yield('content')
 			<!-- /MOBILE MENU -->
 					
 			<!-- SIDEBAR -->
-			@include('Layout.sidebar')
+			@include('frontend.Layout.sidebar')
 			<!-- /SIDEBAR -->
 			
 			<!-- MAINPART -->
@@ -48,23 +48,23 @@
 				<div class="mainpart_inner w-full min-h-[100vh] clear-both float-left relative">
 				
 					<!-- HOME -->
-					@include('pages.home')
+					@include('frontend.pages.home')
 					<!-- /HOME -->
 
 					<!-- ABOUT -->		
-					@include('pages.aboutme')
+					@include('frontend.pages.aboutme')
 					<!-- /ABOUT -->
 					
 					<!-- Projects -->
-					@include('pages.projects')
+					@include('frontend.pages.projects')
 					<!-- /Projects -->
 					
 					<!-- PORTFOLIO -->
-					@include('pages.portfolio')
+					@include('frontend.pages.portfolio')
 					<!-- /PORTFOLIO -->
 
 					<!-- CONTACT -->
-					@include('pages.contact')
+					@include('frontend.pages.contact')
 					<!-- /CONTACT -->
 					
 				</div>

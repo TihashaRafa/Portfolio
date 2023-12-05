@@ -11,12 +11,12 @@
         </div>
         <div class="menu scrollable w-full float-left">
             <ul class="anchor_nav h-full flex items-center justify-center flex-col">
-                <li class="current mb-[15px]"><a href="#home">Home</a></li>
-                <li class="mb-[15px]"><a href="#about">About</a></li>
-                <li class="mb-[15px]"><a href="#project">Project</a></li>
-                <li class="mb-[15px]"><a href="#portfolio">Portfolio</a></li>
+                {{-- @foreach($sidebar as $items)
+                    {{ $items-> title }}
                 
-                <li><a href="#contact">Contact</a></li>
+                @endforeach --}}
+
+                <li class="current mb-[15px]"><a href="#home">Home</a></li>
             </ul>
         </div>
         <div class="copyright absolute bottom-[50px]">

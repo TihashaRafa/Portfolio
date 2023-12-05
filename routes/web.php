@@ -24,14 +24,14 @@ Use App\Http\Controllers\UserController;
 Route::get('/', [UserController::class,'index'])->name('');
 
 Route::get('/admin/login', [AdminController::class,'admin'])->name('');
-
 Route::get('/home', [SideBarController::class,''])->name('');
 
 
-
-Route::get('/sidebar', [SideBarController::class,'create'])->name('sidebar.create');
-Route::post('/sidebar/add', [SideBarController::class,'store'])->name('sidebar.add');
-Route::get('/sidebar/index', [SideBarController::class,'index'])->name('sidebar.index');
-Route::get('/sidebar/edit/{id}', [SideBarController::class,'edit'])->name('sidebar.edit');
-Route::post('/sidebar/update/{id}', [SideBarController::class,'update'])->name('sidebar.update');
-Route::get('/sidebar/delete/{id}', [SideBarController::class,'destroy'])->name('sidebar.delete');
+Route::group(['prefix' => 'sidebar'], function () {
+    Route::get('/', [SideBarController::class, 'create'])->name('sidebar.create');
+    Route::post('/add', [SideBarController::class, 'store'])->name('sidebar.add');
+    Route::get('/index', [SideBarController::class, 'index'])->name('sidebar.index');
+    Route::get('/edit/{id}', [SideBarController::class, 'edit'])->name('sidebar.edit');
+    Route::post('/update/{id}', [SideBarController::class, 'update'])->name('sidebar.update');
+    Route::get('/delete/{id}', [SideBarController::class, 'destroy'])->name('sidebar.delete');
+});

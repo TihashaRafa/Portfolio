@@ -38,8 +38,6 @@ class SideBarController extends Controller
         return view('backend.pages.sidebar.edit', compact('sideBer'));
     }
 
-
-
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
@@ -61,6 +59,8 @@ class SideBarController extends Controller
         sideBer::destroy($id);
         return redirect(route('sidebar.index'))->with('success','Delete successfully');
     }
+
+
 
 
 }

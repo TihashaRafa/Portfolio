@@ -13,8 +13,15 @@ return new class extends Migration
     {
         Schema::create('side_bers', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->nullable();
+            $table->string('name');
             $table->string('title')->unique();
             $table->string('slug');
+            $table->string('fb_link');
+            $table->string('linkedin_link');
+            $table->string('git_link');
+            $table->string('footer_content');
+            
             $table->timestamps();
         });
     }

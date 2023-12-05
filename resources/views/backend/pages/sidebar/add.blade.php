@@ -23,12 +23,57 @@
                                 @csrf
                                 <div class="card-body">
                                     <div class="form-group row">
-                                        <label for="title" class="col-sm-2 col-form-label">Title</label>
+                                        <label for="title" class="col-sm-2 col-form-label">Image</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control" id="image" name="image">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control" id="name" name="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">Sidebar Title</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" id="title" name="title"
                                                 placeholder="Title Here...">
                                         </div>
                                     </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">Facebook Link</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="fb_link" name="fb_link"
+                                                ">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">LinkedIn link</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="linkedin_link" name="linkedin_link">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">Github Link</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="git_link" name="git_link">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="title" class="col-sm-2 col-form-label">Content</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="content" name="content">
+                                        </div>
+                                    </div>
+
+
                                 </div>
 
                                 <div class="card-footer">
