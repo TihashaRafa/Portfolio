@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('linkedin_link');
             $table->string('git_link');
             $table->string('footer_content');
-            
             $table->timestamps();
         });
     }
