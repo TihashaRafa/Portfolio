@@ -84,7 +84,7 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="button_one" class="col-sm-2 col-form-label">Button one</label>
+                                        <label for="button_one" class="col-sm-2 col-form-label">Button One</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" id="button_one" name="button_one"">
                                         </div>

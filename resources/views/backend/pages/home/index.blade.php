@@ -44,15 +44,37 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Name</th>
+                                            <th>Title</th>
+                                            <th>Title One</th>
+                                            <th>Title Two</th>
+                                            <th>Title Three</th>
+                                            <th>Description</th>
+                                            <th>Image</th>
+                                            <th>Button one</th>
+                                            <th>Button Two</th>
+                                            <th>Number</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                     
                                         @foreach($homepage as $key => $items)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $items->name }}</td>
+                                            <td>{{ $items->title }}</td>
+                                            <td>{{ $items->title_one }}</td>
+                                            <td>{{ $items->title_two }}</td>
+                                            <td>{{ $items->title_three }}</td>
+                                            <td>{{ $items->description }}</td>
+                                            <td>{{ $items->image }}</td>
+                                            <td>{{ $items->button_one }}</td>
+                                            <td>{{ $items->button_two }}</td>
+                                            <td>{{ $items->number }}</td>
+                                            <td>{{ $items->email }}</td>
+                                            <td>{{ $items->address }}</td>
+                                           
                                             <td>
                                               <a href="{{ route('home.edit', $items->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                               <a href="{{ route('home.delete', $items->id) }}" class="btn btn-primary btn-sm">Delete</a>
