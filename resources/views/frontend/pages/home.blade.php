@@ -1,10 +1,20 @@
+
+
+@php
+    $homepage = App\Models\home::all();
+@endphp
+
 <div class="elisc_tm_section animated" id="home">
     <div class="elisc_tm_home w-full min-h-[100vh] clear-both float-left bg-[#EFFBF8]">
         <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
             <div class="details w-full min-h-[100vh] flex items-center">
                 <div class="left w-1/2">
                     <div class="title w-full float-left mb-[21px]">
-                        <h3 class="font-extrabold text-[50px] leading-[60px]">Hi, I'm <span class="text-blue-color">Tihasha Rafa!</span></h3>
+
+                        @foreach($homepage as $items)
+
+
+                        <h3 class="font-extrabold text-[50px] leading-[60px]">Hi, I'm <span class="text-blue-color">{{ $items->name }}</span></h3>
                         <h3 class="font-extrabold text-[50px] leading-[60px]">
                             <span class="cd-headline clip"> 
                                 <span class="blc">Creative</span>
@@ -15,6 +25,7 @@
                                 </span>
                             </span>
                         </h3>
+                        @endforeach
                         {{-- <h3 class="font-extrabold text-[60px] leading-[70px]">Based in Florida</h3> --}}
                     </div>
                     <div class="subtitle wfll max-w-[80%] float-left mb-[40px]">

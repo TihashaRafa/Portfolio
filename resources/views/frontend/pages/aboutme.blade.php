@@ -25,6 +25,7 @@
                 </div>
                 <div class="right w-[60%]">
                     <div class="text w-full float-left mb-[44px]">
+                        
                         <p class="mb-[30px]">Hello there! My name is <span class="text-yellow-color">Tihasha Rafa</span>. I am a website  &amp; developer, and I'm very passionate and dedicated to my work.</p>
                         <p>With 1 years experience as a professional a Website development, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the development process, from discussion and collaboration.</p>
                     </div>
