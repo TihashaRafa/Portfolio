@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SideBarController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\SidebarTwoController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -66,4 +67,15 @@ Route::group(['prefix' => 'about'], function () {
     Route::post('/update/{id}', [AboutController::class, 'update'])->name('about.update');
     Route::get('/delete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
 });
+
+
+Route::group(['prefix' => 'exprience'], function () {
+    Route::get('/', [ExperienceController::class, 'create'])->name('exprience.create');
+    Route::post('/add', [ExperienceController::class, 'store'])->name('exprience.add');
+    Route::get('/index', [ExperienceController::class, 'index'])->name('exprience.index');
+    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('exprience.edit');
+    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('exprience.update');
+    Route::get('/delete/{id}', [ExperienceController::class, 'destroy'])->name('exprience.delete');
+});
+
 
