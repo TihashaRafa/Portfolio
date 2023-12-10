@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SideBarController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SidebarTwoController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -54,5 +55,15 @@ Route::group(['prefix' => 'home'], function () {
     Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('home.edit');
     Route::post('/update/{id}', [HomeController::class, 'update'])->name('home.update');
     Route::get('/delete/{id}', [HomeController::class, 'destroy'])->name('home.delete');
+});
+
+
+Route::group(['prefix' => 'about'], function () {
+    Route::get('/', [AboutController::class, 'create'])->name('about.create');
+    Route::post('/add', [AboutController::class, 'store'])->name('about.add');
+    Route::get('/index', [AboutController::class, 'index'])->name('about.index');
+    Route::get('/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
+    Route::post('/update/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::get('/delete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
 });
 
