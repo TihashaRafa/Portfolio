@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
+            $table->string('description_one');
+            $table->string('description_two');
+            $table->string('description_three');
+            $table->string('age');
+            $table->string('birth');
+            $table->string('experience_year');
+            $table->string('experience');
+            $table->string('project_num');
+            $table->string('project');
+            $table->string('client_num');
+            $table->string('client');
             $table->timestamps();
         });
     }
