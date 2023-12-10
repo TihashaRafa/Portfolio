@@ -69,13 +69,13 @@ Route::group(['prefix' => 'about'], function () {
 });
 
 
-Route::group(['prefix' => 'exprience'], function () {
-    Route::get('/', [ExperienceController::class, 'create'])->name('exprience.create');
-    Route::post('/add', [ExperienceController::class, 'store'])->name('exprience.add');
-    Route::get('/index', [ExperienceController::class, 'index'])->name('exprience.index');
-    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('exprience.edit');
-    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('exprience.update');
-    Route::get('/delete/{id}', [ExperienceController::class, 'destroy'])->name('exprience.delete');
+Route::group(['prefix' => 'experience'], function () {
+    Route::get('/', [ExperienceController::class, 'create'])->name('experience.create');
+    Route::post('/add', [ExperienceController::class, 'store'])->name('experience.add');
+    Route::get('/index', [ExperienceController::class, 'index'])->name('experience.index');
+    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('experience.edit');
+    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('experience.update');
+    Route::get('/delete/{id}', [ExperienceController::class, 'destroy'])->name('experience.delete');
 });
 
 
