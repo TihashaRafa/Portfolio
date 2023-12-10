@@ -43,18 +43,18 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Title</th>
-                                            <th>Title One</th>
-                                            <th>Title Two</th>
-                                            <th>Title Three</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Button one</th>
-                                            <th>Button Two</th>
-                                            <th>Number</th>
-                                            <th>Email</th>
-                                            <th>Address</th>
+                                            <th>Description One</th>
+                                            <th>Description Two</th>
+                                            <th>Description Three</th>
+                                            <th>Age</th>
+                                            <th>Birth</th>
+                                            <th>Experience Year</th>
+                                            <th>Experience</th>
+                                            <th>Project Num</th>
+                                            <th>Project</th>
+                                            <th>Client Num</th>
+                                            <th>Clients</th>
+                                           
                                             <th>Action</th>
                                         </tr>
                                     </thead>

@@ -20,21 +20,21 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required',
+            'description_one' => 'required',
         ]);
 
         $about = new about();
-        $about->description_one                 = $validated['description_one'];
-        $about->description_two                 = $validated['description_two'];
-        $about->description_three               = $validated['description_three'];
-        $about->age                             = $validated['age'];
-        $about->birth                           = $validated['birth'];
-        $about->experience_year                 = $validated['experience_year'];
-        $about->experience                      = $validated['experience'];
-        $about->project_num                     = $validated['project_num'];
-        $about->project                         = $validated['project'];
-        $about->client_num                      = $validated['client_num'];
-        $about->client                          = $validated['client'];
+        $about->description_one                 = $request['description_one'];
+        $about->description_two                 = $request['description_two'];
+        $about->description_three               = $request['description_three'];
+        $about->age                             = $request['age'];
+        $about->birth                           = $request['birth'];
+        $about->experience_year                 = $request['experience_year'];
+        $about->experience                      = $request['experience'];
+        $about->project_num                     = $request['project_num'];
+        $about->project                         = $request['project'];
+        $about->client_num                      = $request['client_num'];
+        $about->client                          = $request['client'];
        
         
         $about->save();
