@@ -79,3 +79,13 @@ Route::group(['prefix' => 'experience'], function () {
 });
 
 
+Route::group(['prefix' => 'service'], function () {
+    Route::get('/', [ExperienceController::class, 'create'])->name('service.create');
+    Route::post('/add', [ExperienceController::class, 'store'])->name('service.add');
+    Route::get('/index', [ExperienceController::class, 'index'])->name('service.index');
+    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('service.edit');
+    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('service.update');
+    Route::get('/delete/{id}', [ExperienceController::class, 'destroy'])->name('service.delete');
+});
+
+
