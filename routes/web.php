@@ -5,6 +5,7 @@ use App\Http\Controllers\SideBarController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\SidebarTwoController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
@@ -80,12 +81,12 @@ Route::group(['prefix' => 'experience'], function () {
 
 
 Route::group(['prefix' => 'service'], function () {
-    Route::get('/', [ExperienceController::class, 'create'])->name('service.create');
-    Route::post('/add', [ExperienceController::class, 'store'])->name('service.add');
-    Route::get('/index', [ExperienceController::class, 'index'])->name('service.index');
-    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('service.edit');
-    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('service.update');
-    Route::get('/delete/{id}', [ExperienceController::class, 'destroy'])->name('service.delete');
+    Route::get('/', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/add', [ServiceController::class, 'store'])->name('service.add');
+    Route::get('/index', [ServiceController::class, 'index'])->name('service.index');
+    Route::get('/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::post('/update/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::get('/delete/{id}', [ServiceController::class, 'destroy'])->name('service.delete');
 });
 
 
