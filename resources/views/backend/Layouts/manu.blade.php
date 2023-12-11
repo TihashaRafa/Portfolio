@@ -89,7 +89,7 @@
 
 
           <li class="nav-item">
-            <a href="{{ route('experience.index') }}" class="nav-link">
+            <a href="{{ route('service.index') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Service Page
