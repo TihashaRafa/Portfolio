@@ -19,10 +19,6 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-        ]);
-
         $service = new service();
         $service->Service_title                           = $request['Service_title'];
         $service->Service_num                             = $request['Service_num'];
