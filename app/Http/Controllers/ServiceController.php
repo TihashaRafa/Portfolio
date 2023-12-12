@@ -24,43 +24,35 @@ class ServiceController extends Controller
         $service->Service_num                             = $request['Service_num'];
         $service->description                             = $request['description'];
         $service->image                                   = $request['image'];
-       
-        
-       
+      
         $service->save();
 
         return redirect(route('service.index'))->with('success', 'service data created successfully.');
     }
 
+    public function edit($id)
+    {
+        $service = service::findOrFail($id);
+        return view('backend.pages.service.edit', compact('service'));
+    }
 
-    // public function edit($id)
-    // {
-    //     $experience = service::findOrFail($id);
-    //     return view('backend.pages.service.edit', compact('experience'));
-    // }
+    public function update(Request $request, $id)
+    {
+        $service = service::find($id);
+        $service->Service_title = $request->Service_title;
+        $service->Service_num = $request->Service_num;
+        $service->description = $request->description;
+        $service->image = $request->image;
 
-    // public function update(Request $request, $id)
-    // {
-
-    //     $experience = service::find($id);
-    //     $experience = new service();
-    //     $experience->title                           = $request['title'];
-    //     $experience->start_year                      = $request['start_year'];
-    //     $experience->end_year                        = $request['end_year'];
-    //     $experience->experience_title                = $request['experience_title'];
-    //     $experience->organization                    = $request['organization'];
-    //     $experience->description                     = $request['description'];
        
-       
-    //     $experience->save();
+        $service->save();
 
-    //     return redirect(route('service.index'))->with('success', 'Data updated successfully.');
-    // }
-
+        return redirect(route('service.index'))->with('success', 'Data updated successfully.');
+    }
 
 
-    // public function destroy($id){
-    //     service::destroy($id);
-    //     return redirect(route('service.index'))->with('success','Delete successfully');
-    // }
+    public function destroy($id){
+        service::destroy($id);
+        return redirect(route('service.index'))->with('success','Delete successfully');
+    }
 }

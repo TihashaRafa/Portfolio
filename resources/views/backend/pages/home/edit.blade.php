@@ -19,7 +19,7 @@
                             <div class="card-header">
                                 <h3 class="card-title"> Home Page Form</h3>
                             </div>
-                            <form method="POST" action="#" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('home.update', $homepage->id) }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                  
@@ -79,7 +79,7 @@
                                     <div class="form-group row">
                                         <label for="image" class="col-sm-2 col-form-label">Image</label>
                                         <div class="col-sm-10">
-                                            <input type="file" class="form-control" id="image" name="image"">
+                                            <input type="test" class="form-control" id="image" name="image"">
                                         </div>
                                     </div>
 

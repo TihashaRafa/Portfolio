@@ -115,6 +115,14 @@
 
 
                                     <div class="form-group row">
+                                        <label for="image" class="col-sm-2 col-form-label">Image</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="image" name="image"">
+                                        </div>
+                                    </div>
+
+
+                                    {{-- <div class="form-group row">
                                         <label for="image" class="col-sm-2 col-form-label">Image Update</label>
                                         <div class="btn-group w-100">
                                             <span class="btn btn-success col fileinput-button dz-clickable">
@@ -142,7 +150,7 @@
                                           <div class="table table-striped files" id="previews">
                   
                                           </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Create</button>
