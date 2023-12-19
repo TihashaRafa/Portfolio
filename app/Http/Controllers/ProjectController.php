@@ -19,43 +19,37 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-        $sideBars = new Project();
-        $sideBars->image = $request->image;
-        $sideBars->name = $request->name;
-        $sideBars->fb_link = $request->fb_link;
-        $sideBars->linkedin_link = $request->linkedin_link;
-        $sideBars->git_link = $request->git_link;
-        $sideBars->footer_content = $request->content;
+        $projects = new Project();
+        $projects->image = $request->image;
+        $projects->Project_title = $request->Project_title;
+        $projects->category = $request->category;
         
-        $sideBars->save();
+        $projects->save();
 
-        return redirect(route('projects.index'))->with('success', 'Sideber created successfully.');
+        return redirect(route('project.index'))->with('success', 'Sideber created successfully.');
     }
 
 
     public function edit($id)
     {
-        $sideBars = Project::findOrFail($id);
-        return view('backend.pages.Project.edit', compact('sideBars'));
+        $projects = Project::findOrFail($id);
+        return view('backend.pages.Project.edit', compact('projects'));
     }
 
     public function update(Request $request, $id)
     {
-        $sideBars = Project::find($id);
-        $sideBars->image = $request->image;
-        $sideBars->name = $request->name;
-        $sideBars->fb_link = $request->fb_link;
-        $sideBars->linkedin_link = $request->linkedin_link;
-        $sideBars->git_link = $request->git_link;
-        $sideBars->footer_content = $request->content;
+        $projects = Project::find($id);
+        $projects->image = $request->image;
+        $projects->Project_title = $request->Project_title;
+        $projects->category = $request->category;
        
-        $sideBars->save();
+        $projects->save();
 
-        return redirect(route('projects.index'))->with('success', 'Data updated successfully.');
+        return redirect(route('project.index'))->with('success', 'Data updated successfully.');
     }
 
     public function destroy($id){
         Project::destroy($id);
-        return redirect(route('projects.index'))->with('success','Delete successfully');
+        return redirect(route('project.index'))->with('success','Delete successfully');
     }
 }

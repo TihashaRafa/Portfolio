@@ -7,6 +7,7 @@ use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\SidebarTwoController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
 
@@ -90,3 +91,12 @@ Route::group(['prefix' => 'service'], function () {
 });
 
 
+
+Route::group(['prefix' => 'project'], function () {
+    Route::get('/', [ProjectController::class, 'create'])->name('project.create');
+    Route::post('/add', [ProjectController::class, 'store'])->name('project.add');
+    Route::get('/index', [ProjectController::class, 'index'])->name('project.index');
+    Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');
+    Route::post('/update/{id}', [ProjectController::class, 'update'])->name('project.update');
+    Route::get('/delete/{id}', [ProjectController::class, 'destroy'])->name('project.delete');
+});
